@@ -75,7 +75,7 @@ var templates = {
   'pages_page2': ... // page2.html content
 }
 
-export function getContent(id){
+export function getTemplate(id){
   return templates[id];
 }
 ```
