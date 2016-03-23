@@ -1,0 +1,37 @@
+{
+  "dependencies": {
+    "through2": "^2.0.1",
+    "extend": "^3.0.0",
+    "fs": "0.0.2",
+    "gulp": "3.9.1",
+    "gulp-insert": "^0.5.0",
+    "gulp-util": "^3.0.7",
+    "path": "^0.12.7"
+  },
+  "name": "gulp-ng2-template-wrap",
+  "description": "Gulp plugin to wrap Angular2 templates into separate ES6 module.",
+  "keywords": [
+    "angular2",
+    "es6",
+    "gulp",
+    "template",
+    "cache"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "author": {
+      "name": "evgenys91",
+      "email": "evgeny.sorokin91@gmail.com"
+  },
+  "maintainers": [
+    {
+      "name": "evgenys91",
+      "email": "evgeny.sorokin91@gmail.com"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evgenys91/gulp-ng2-template-wrap.git"
+  },
+  "version": "0.0.1"
+}
