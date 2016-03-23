@@ -2,7 +2,8 @@ var extend = require('extend'),
 	path = require('path'),
 	fs = require('fs'),
     insert = require('gulp-insert'),
-    gutil = require('gulp-util');
+    gutil = require('gulp-util'),
+    through = require('through2');
 
 var PLUGIN_NAME = 'gulp-ng2-template-wrap';
 
