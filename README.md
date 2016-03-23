@@ -86,7 +86,7 @@ __othermodule (othermodule.js)__
 import {getTemplate} from 'templates';
 
 @Component({
-  template: getTemplate('pages_page1_page1')
+  template: getTemplate('pages_page1')
 })
 export class ...
 
