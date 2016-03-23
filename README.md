@@ -27,7 +27,7 @@ defaults = {
 ```
 
 Defaults are configured for the following project structure
-
+.
 +-- app
 |   +-- pages
     |   +-- page1.html
