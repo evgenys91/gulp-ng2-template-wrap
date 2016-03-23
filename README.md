@@ -7,7 +7,7 @@ Initially was created to use in Ionic projects that support iOS "WKWebView". Wit
 
 __note:__
 
-* 0.0.1 the very first version of project, not tested. Not recommended to use in producti.
+* 0.0.3 the very first version of project, not tested. Not recommended to use in producti.
 
 # Installation
 
