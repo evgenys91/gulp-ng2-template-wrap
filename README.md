@@ -46,7 +46,7 @@ Defaults are configured for the following project structure
 var templatesWrap = require('gulp-ng2-template-wrap');
 
 gulp.task('templates', function(){
-  gulp.src('app/**/*.html').pipe(tpl({
+  gulp.src('app/**/*.html').pipe(templatesWrap({
     templateIdDelimiter: '_'
   }));
 });
