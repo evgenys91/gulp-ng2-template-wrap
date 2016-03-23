@@ -27,7 +27,7 @@ defaults = {
 ```
 
 Defaults are configured for the following project structure
-.
+```
 +-- app
 |   +-- pages
     |   +-- page1.html
@@ -37,7 +37,7 @@ Defaults are configured for the following project structure
 +-- index.html
 +-- gulpfile.js
 +-- packages.json
-
+```
 
 # Example usage
 
