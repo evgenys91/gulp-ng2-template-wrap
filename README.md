@@ -7,7 +7,7 @@ Initially was created to use in Ionic projects that support iOS "WKWebView". Wit
 
 __note:__
 
-* 0.0.3 the very first version of project, not tested. Not recommended to use in producti.
+* 0.0.4 the very first version of project, not tested. Not recommended to use in producti.
 
 # Installation
 
@@ -85,8 +85,8 @@ __othermodule (othermodule.js)__
 ```javascript
 import {getTemplate} from 'templates';
 
-@Page({
-  template: getTemplate('pages.page1.page1')
+@Component({
+  template: getTemplate('pages_page1_page1')
 })
 export class ...
 
