@@ -3,7 +3,8 @@ var extend = require('extend'),
 	fs = require('fs'),
     insert = require('gulp-insert'),
     gutil = require('gulp-util'),
-    through = require('through2');
+	through = require('through2'),
+	_ = require("lodash");
 
 var PLUGIN_NAME = 'gulp-ng2-template-wrap';
 
@@ -54,22 +55,41 @@ module.exports = exports = function templateWrap(options){
 
 		var rawPath = filePath.substring(filePath.indexOf(baseDir) + baseDir.length + 1, filePath.indexOf(path.extname(filePath)));
 		var pathWithoutDelimiters = rawPath.split(path.sep).join(opts.templateIdDelimiter);
-		fs.appendFile(templatesFile, getModuleExportString(pathWithoutDelimiters, '\`' + template + '\`'));
+		fs.appendFile(templatesFile, generateTemplate(pathWithoutDelimiters, template));
 	}
 
 
 	function getModuleConfigStart(){
-		return "var templates = { \n";
+		return "var templates = {};\n";
 	}
 
 	function getModuleConfigEnd(){
-		return  "}" + 
-				"\n" + 
+		return  "\n" + 
 				"export function getTemplate(id){return templates[id];}";
 	}
 
-	function getModuleExportString(filePath, content){
-		return "\'" + filePath + "\' : " + content + ',\n';
+	function getPrettyEscapedContent(templateContent) {
+        return templateContent
+            .replace(/\\/g, "\\\\")
+            .replace(/'/g, "\\'")
+            .replace(/\r?\n/g, "\\n' +\n    '");
 	}
+		
+	function generateTemplate(url, html) {
+        var templateParams = getTemplateParams();
 
+		return _.template("templates['<%= template.url %>'] = '<%= template.prettyEscapedContent %>';\n")(templateParams);
+
+		function getTemplateParams() {
+            var params = {
+                template: {
+                    url: url
+                }
+            };
+            params.template.content = String(html);
+            params.template.prettyEscapedContent = getPrettyEscapedContent(params.template.content);
+
+            return params;
+        }
+	}
 }

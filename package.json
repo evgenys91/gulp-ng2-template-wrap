@@ -6,7 +6,8 @@
     "gulp": "3.9.1",
     "gulp-insert": "^0.5.0",
     "gulp-util": "^3.0.7",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+	"lodash": "^3.3.0"
   },
   "name": "gulp-ng2-template-wrap",
   "description": "Gulp plugin to wrap Angular2 templates into separate ES6 module.",
@@ -33,5 +34,5 @@
     "type": "git",
     "url": "git+https://github.com/evgenys91/gulp-ng2-template-wrap.git"
   },
-  "version": "0.0.5"
+  "version": "0.0.6"
 }
